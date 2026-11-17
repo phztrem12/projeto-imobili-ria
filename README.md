@@ -11,8 +11,8 @@ Este repositório está preparado para **Cloudflare Pages via integração com G
 3. Configure:
    - **Production branch:** `main`
    - **Framework preset:** `None`
-   - **Build command:** deixar vazio
-   - **Build output directory:** `/`
+   - **Build command:** `exit 0`
+   - **Build output directory:** `.`
 4. Salve e inicie a implantação.
 
 O arquivo de entrada é `index.html`; não há etapa de build.
