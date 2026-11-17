@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AURUM Residences — Imobiliária de alto padrão</title>
+<meta name="description" content="AURUM Residences: experiência demonstrativa de imóveis de alto padrão, com catálogo, busca e atendimento imobiliário.">
+<meta property="og:title" content="AURUM Residences — Mais que um imóvel. Um novo jeito de viver.">
+<meta property="og:description" content="Catálogo de imóveis de alto padrão com experiência 3D cinematográfica.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#080808">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"AURUM Residences (demonstração)","areaServed":["São Paulo","Ribeirão Preto","Franca"],"address":{"@type":"PostalAddress","streetAddress":"Av. Exemplo, 1000 (endereço demonstrativo)","addressLocality":"São Paulo","addressCountry":"BR"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bk:#080808;--gr:#1a1a1c;--gr2:#2a2a2d;--gd:#c6a56b;--wh:#f4f1ea;--mu:#9a968d;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:80px;background:var(--bk)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bk);color:var(--wh);font:300 16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-height:1.05;margin:0}
+.gd{color:var(--gd)}.eyebrow{letter-spacing:.3em;font-size:11px;text-transform:uppercase;color:var(--gd)}
+section{position:relative}.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.pad{padding:clamp(80px,12vw,160px) 0}
+h2{font-size:clamp(34px,5.5vw,76px);margin:14px 0 28px}
+.wd{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}.wd span{display:inline-block}
+.btn{display:inline-block;border:1px solid var(--gd);color:var(--gd);background:none;padding:15px 34px;letter-spacing:.22em;font:400 12px Inter,sans-serif;text-transform:uppercase;cursor:pointer;transition:.4s;position:relative;overflow:hidden}
+.btn:hover,.btn.f{background:var(--gd);color:var(--bk)}
+/* header */
+#hd{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:calc(22px + env(safe-area-inset-top,0px)) clamp(20px,4vw,48px) 22px;transition:.5s}
+#hd.sc{background:rgba(8,8,8,.82);backdrop-filter:blur(14px);padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:14px;border-bottom:1px solid #ffffff12}
+.logo{font:500 22px "Cormorant Garamond",serif;letter-spacing:.34em}.logo i{display:block;font:300 8px Inter;letter-spacing:.5em;color:var(--gd);font-style:normal;margin-top:2px}
+#hd nav{display:flex;gap:30px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+#hd nav a{opacity:.75;transition:.3s}#hd nav a:hover{opacity:1;color:var(--gd)}
+.menubtn{display:none;width:44px;height:44px;border:1px solid #c6a56b88;background:#08080899;color:var(--gd);align-items:center;justify-content:center;flex-direction:column;gap:6px;cursor:pointer}.menubtn span{display:block;width:18px;height:1px;background:currentColor;transition:transform .3s}
+@media(max-width:900px){#hd{gap:12px}#hd nav{display:none}#hd nav.open{display:flex;position:absolute;top:100%;left:0;right:0;padding:22px clamp(20px,4vw,48px) 28px;background:rgba(8,8,8,.97);backdrop-filter:blur(18px);border-bottom:1px solid #ffffff18;flex-direction:column;gap:18px}#hd .menubtn{display:flex}#hd .btn{padding:10px 14px!important;font-size:10px}}
+@media(max-width:420px){#hd .logo{font-size:18px;letter-spacing:.24em}#hd .btn{display:none}}
+#hd.menuopen .menubtn span:first-child{transform:translateY(3.5px) rotate(45deg)}#hd.menuopen .menubtn span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+/* story */
+#story{height:720vh}#story.no3d,#story.rm{height:100svh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:radial-gradient(ellipse at 50% 60%,#14141a,#050505 70%)}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+#smoke{position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 30% 40%,#8d8d93aa,transparent 55%),radial-gradient(ellipse at 70% 60%,#6d6d73cc,transparent 60%),radial-gradient(circle at 50% 50%,#2c2c30,transparent 80%);filter:blur(30px)}
+#t1,#t5{position:absolute;left:0;right:0;text-align:center;padding:0 24px;pointer-events:none}
+#t1{top:15vh}#t1 h1{font-size:clamp(30px,5.4vw,76px);letter-spacing:.04em;margin:18px 0}
+#t1>*{opacity:0;animation:up 1.6s forwards}#t1 .logo{animation-delay:.8s}#t1 h1{animation-delay:1.8s}#t1 p{animation-delay:2.8s;max-width:560px;margin:0 auto;color:var(--mu)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+#t5{bottom:11vh;opacity:0}#t5 h2{margin:0 0 26px}#t5 .btn{pointer-events:auto}
+#cap{position:absolute;left:clamp(20px,4vw,48px);bottom:7vh;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gd);transition:opacity .4s}
+.bar{position:absolute;right:clamp(20px,4vw,48px);top:25vh;bottom:25vh;width:1px;background:#ffffff22}.bar b{display:block;width:1px;background:var(--gd);height:0}
+#sc{position:absolute;bottom:4vh;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.4em;color:var(--mu);text-align:center}
+#sc::after{content:"";display:block;width:1px;height:38px;margin:10px auto 0;background:linear-gradient(var(--gd),transparent);animation:ln 2s infinite}
+@keyframes ln{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.no3d #t1,.rm #t1{top:28vh}.no3d #t5,.rm #t5{display:none}
+/* loader/transition */
+#ld{position:fixed;inset:0;z-index:100;background:var(--bk);display:grid;place-items:center;transition:opacity 1s,visibility 1s}
+body.ready #ld{opacity:0;visibility:hidden}#ld span{letter-spacing:.5em;color:var(--gd);font-size:12px;animation:pl 1.4s infinite}
+@keyframes pl{50%{opacity:.25}}
+#pt{position:fixed;inset:0;z-index:90;background:var(--gd);transform:translateY(100%);pointer-events:none;transition:transform .45s cubic-bezier(.7,0,.3,1)}
+#pt.on{transform:none}
+.cur{position:fixed;width:34px;height:34px;border:1px solid var(--gd);border-radius:50%;pointer-events:none;z-index:99;transform:translate(-50%,-50%);transition:width .3s,height .3s,background .3s;mix-blend-mode:difference}
+.cur.h{width:64px;height:64px;background:#c6a56b44}
+/* catalog */
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.filters input,.filters select{background:var(--gr);border:1px solid #ffffff18;color:var(--wh);padding:14px;font:300 14px Inter,sans-serif;width:100%;border-radius:0}
+.filters input:focus,.filters select:focus,.fm input:focus,.fm select:focus,.fm textarea:focus{outline:1px solid var(--gd)}
+.meta{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:13px;margin:18px 0 30px}
+.meta label{cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:34px}
+.card{position:relative;animation:up .9s both}.card .im{aspect-ratio:4/5;overflow:hidden;background:var(--gr);clip-path:inset(0);animation:cp 1.1s cubic-bezier(.7,0,.2,1) both}
+@keyframes cp{from{clip-path:inset(0 0 100% 0)}}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}.card:hover img{transform:scale(1.09)}
+.tag{position:absolute;top:16px;left:16px;background:var(--gd);color:var(--bk);font:500 10px Inter;letter-spacing:.22em;padding:6px 12px;z-index:2}
+.fav{position:absolute;top:10px;right:10px;z-index:3;background:#08080899;border:0;color:var(--wh);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:18px}.fav.on{color:var(--gd)}
+.card h3{font-size:30px;margin:18px 0 2px}.loc{color:var(--mu);font-size:13px}.pr{color:var(--gd);font:400 24px "Cormorant Garamond",serif;margin:8px 0}
+.sp{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mu);padding:12px 0;border-top:1px solid #ffffff14}
+.more{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gd)}
+/* featured */
+#destaques{background:var(--gr)}.car{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px clamp(20px,4vw,48px) 30px;scrollbar-width:none}.car::-webkit-scrollbar{display:none}
+.car .card{flex:0 0 min(78vw,420px);scroll-snap-align:start}.car .card:nth-child(even){margin-top:70px}.car .card:nth-child(3n) .im{aspect-ratio:1/1.2}
+.arrows{display:flex;gap:10px}.arrows button{width:52px;height:52px;border:1px solid var(--gd);background:none;color:var(--gd);cursor:pointer;font-size:18px;transition:.3s}.arrows button:hover{background:var(--gd);color:var(--bk)}
+/* about */
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,90px)}@media(max-width:900px){.two{grid-template-columns:1fr}}
+.cnt{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:40px}.cnt b{display:block;font:300 clamp(44px,6vw,80px) "Cormorant Garamond",serif;color:var(--gd);line-height:1}.cnt span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mu)}
+.dif{list-style:none;padding:0;margin:30px 0 0}.dif li{padding:18px 0;border-top:1px solid #ffffff18;display:flex;gap:20px}.dif li b{color:var(--gd);font:400 13px Inter;letter-spacing:.2em;min-width:30px}
+.demo{display:inline-block;border:1px dashed var(--gd);color:var(--gd);font-size:10px;letter-spacing:.2em;padding:3px 9px;text-transform:uppercase}
+/* forms */
+.fm{display:grid;gap:14px;grid-template-columns:1fr 1fr}.fm .full{grid-column:1/-1}@media(max-width:700px){.fm{grid-template-columns:1fr}}
+.fm input,.fm select,.fm textarea{background:transparent;border:0;border-bottom:1px solid #ffffff33;color:var(--wh);padding:14px 2px;font:300 15px Inter,sans-serif;width:100%;border-radius:0}
+.fm textarea{min-height:100px;resize:vertical}.st{min-height:24px;font-size:13px;color:var(--gd)}
+#captacao{background:linear-gradient(180deg,var(--bk),#111114)}
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+.av{aspect-ratio:3/4;background:linear-gradient(160deg,var(--gr2),#0e0e10);display:grid;place-items:center;font:300 64px "Cormorant Garamond",serif;color:var(--gd);margin-bottom:14px;position:relative;overflow:hidden}
+.av small{position:absolute;bottom:8px;font:300 9px Inter;letter-spacing:.2em;color:var(--mu)}
+.tm{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:80px}
+.tm blockquote{margin:0;border-left:1px solid var(--gd);padding:6px 0 6px 24px;font:italic 400 24px/1.35 "Cormorant Garamond",serif}
+footer{background:#050505;border-top:1px solid #ffffff14;padding:80px 0 40px;font-size:14px;color:var(--mu)}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+footer h4{color:var(--wh);font:500 11px Inter;letter-spacing:.25em;text-transform:uppercase;margin:0 0 16px}footer a{display:block;padding:4px 0}footer a:hover{color:var(--gd)}
+.fb{margin-top:50px;padding-top:24px;border-top:1px solid #ffffff14;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+#wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;background:#25D366;color:#06210f;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font:600 13px Inter;box-shadow:0 8px 30px #0008;transition:.3s}#wa:hover{transform:scale(1.1)}
+/* detail */
+#det{position:fixed;inset:0;z-index:70;background:var(--bk);overflow:auto;display:none}#det.on{display:block}
+.dg{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(24px,4vw,60px);padding-top:100px}@media(max-width:900px){.dg{grid-template-columns:1fr}}
+.gal{position:relative;aspect-ratio:4/3;background:var(--gr);overflow:hidden}.gal img{width:100%;height:100%;object-fit:cover}
+.gal button{position:absolute;top:50%;transform:translateY(-50%);background:#080808aa;border:0;color:#fff;width:48px;height:48px;font-size:20px;cursor:pointer}
+.th{display:flex;gap:8px;margin-top:8px}.th img{width:25%;aspect-ratio:4/3;object-fit:cover;opacity:.45;cursor:pointer;transition:.3s}.th img.on,.th img:hover{opacity:1}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff14;margin:24px 0}.sg div{background:var(--bk);padding:16px;font-size:12px;color:var(--mu)}.sg b{display:block;color:var(--wh);font:400 22px "Cormorant Garamond",serif}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.map{border:1px solid #ffffff1a;padding:22px;margin:24px 0;background:repeating-linear-gradient(45deg,#101012,#101012 12px,#141417 12px,#141417 24px)}
+#x{position:fixed;top:calc(18px + env(safe-area-inset-top,0px));right:20px;z-index:80;background:var(--bk);border:1px solid var(--gd);color:var(--gd);width:48px;height:48px;cursor:pointer;font-size:18px;display:none}#det.on~#x{display:block}
+dialog{background:var(--gr);color:var(--wh);border:1px solid var(--gd);max-width:560px;padding:34px}dialog::backdrop{background:#000b}
+</style>
+</head>
+<body>
+<div id="ld"><span>AURUM</span></div><div id="pt"></div>
+<header id="hd"><a class="logo" href="#top">AURUM<i>RESIDENCES</i></a>
+<nav id="mainnav"><a href="#imoveis">Imóveis</a><a href="#destaques">Destaques</a><a href="#sobre">Sobre</a><a href="#captacao">Venda seu imóvel</a><a href="#equipe">Equipe</a></nav>
+<button id="mb" class="menubtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span></button>
+<a class="btn" id="hwa" target="_blank" rel="noopener" style="padding:10px 20px">WhatsApp</a></header>
+
+<section id="story"><div class="stage" id="top">
+<canvas id="cv" aria-label="Residência moderna em 3D que reage à rolagem"></canvas><div id="smoke"></div>
+<div id="t1"><div class="logo" style="font-size:26px">AURUM<i>RESIDENCES</i></div>
+<h1>MAIS QUE UM IMÓVEL.<br><span class="gd">UM NOVO JEITO DE VIVER.</span></h1>
+<p>Descubra uma nova perspectiva sobre arquitetura, exclusividade e investimento.</p></div>
+<div id="cap"></div><div class="bar"><b id="pb"></b></div><div id="sc">ROLE PARA EXPLORAR</div>
+<div id="t5"><h2>SEU PRÓXIMO CAPÍTULO<br>COMEÇA AQUI.</h2><a class="btn f" href="#imoveis">EXPLORAR IMÓVEIS</a></div>
+</div></section>
+
+<section id="imoveis" class="pad"><div class="wrap">
+<span class="eyebrow">Catálogo</span><h2 class="sw">Imóveis para viver, investir e herdar.</h2>
+<div class="filters">
+<input id="fq" type="search" placeholder="Pesquisar nome, bairro, cidade…" aria-label="Pesquisar">
+<select id="ff" aria-label="Comprar ou alugar"><option value="">Comprar ou alugar</option><option value="comprar">Comprar</option><option value="alugar">Alugar</option></select>
+<select id="ft" aria-label="Tipo"><option value="">Tipo de imóvel</option></select>
+<select id="fc" aria-label="Cidade"><option value="">Cidade</option></select>
+<select id="fb" aria-label="Bairro"><option value="">Bairro</option></select>
+<select id="fp" aria-label="Preço máximo"></select>
+<select id="fr" aria-label="Quartos"><option value="0">Quartos</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="6">6+</option></select></div>
+<div class="meta"><span id="cn"></span><label><input type="checkbox" id="fv"> Só favoritos (<span id="fn">0</span>)</label></div>
+<div class="grid" id="grid"></div></div></section>
+
+<section id="destaques" class="pad"><div class="wrap" style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px">
+<div><span class="eyebrow">Seleção curada</span><h2 class="sw" style="margin-bottom:0">Imóveis em destaque.</h2></div>
+<div class="arrows"><button id="cp" aria-label="Anterior">←</button><button id="cx" aria-label="Próximo">→</button></div></div>
+<div class="car" id="car" style="margin-top:40px"></div></section>
+
+<section id="sobre" class="pad"><div class="wrap two"><div>
+<span class="eyebrow">Institucional</span><h2 class="sw">MAIS DO QUE IMÓVEIS. NOVAS POSSIBILIDADES.</h2>
+<p class="rv">Fundada para quem enxerga a casa como patrimônio e como projeto de vida, a AURUM combina curadoria arquitetônica, consultoria imobiliária e atendimento personalizado em cada etapa: compra, venda e locação. <span class="demo">texto demonstrativo</span></p>
+<ul class="dif rv"><li><b>01</b>Atendimento personalizado, com um corretor dedicado a cada cliente.</li><li><b>02</b>Consultoria de investimento e avaliação de mercado.</li><li><b>03</b>Curadoria de imóveis com arquitetura e localização excepcionais.</li><li><b>04</b>Compra, venda e locação com acompanhamento documental.</li></ul></div>
+<div><div class="cnt">
+<div class="rv"><b data-n="480">0</b><span>Imóveis</span></div><div class="rv"><b data-n="1250">0</b><span>Clientes</span></div>
+<div class="rv"><b data-n="17">0</b><span>Anos de experiência</span></div><div class="rv"><b data-n="920">0</b><span>Negócios realizados</span></div></div>
+<p style="margin-top:30px"><span class="demo">números demonstrativos — substituir pelos dados reais</span></p></div></div></section>
+
+<section id="captacao" class="pad"><div class="wrap two"><div><span class="eyebrow">Para proprietários</span>
+<h2 class="sw">SEU IMÓVEL MERECE SER VALORIZADO.</h2><p class="rv">Conte sobre o seu imóvel. Um consultor retorna com uma avaliação e a estratégia de venda ou locação.</p></div>
+<form class="fm rv" id="cf" novalidate><input name="nome" placeholder="Nome" required autocomplete="name"><input name="telefone" type="tel" placeholder="Telefone / WhatsApp" required autocomplete="tel">
+<input name="cidade" placeholder="Cidade" required><select name="tipo"><option>Casa</option><option>Apartamento</option><option>Mansão</option><option>Terreno</option><option>Comercial</option></select>
+<select name="op" class="full"><option>Venda</option><option>Locação</option></select><textarea class="full" name="mensagem" placeholder="Mensagem"></textarea>
+<div class="full"><button class="btn f" type="submit">Solicitar avaliação</button></div><div class="full st" id="cs" role="status"></div></form></div></section>
+
+<section id="equipe" class="pad"><div class="wrap"><span class="eyebrow">Equipe</span><h2 class="sw">Especialistas ao seu lado.</h2>
+<p><span class="demo">corretores e depoimentos fictícios — demonstração</span></p><div class="team" id="team"></div>
+<div class="tm"><blockquote class="rv">“Um atendimento que parece feito sob medida.”<br><small style="font:300 12px Inter;color:var(--mu)">Cliente fictício · demonstração</small></blockquote>
+<blockquote class="rv">“Da avaliação à entrega das chaves, tudo com clareza.”<br><small style="font:300 12px Inter;color:var(--mu)">Cliente fictício · demonstração</small></blockquote></div></div></section>
+
+<footer><div class="wrap"><div class="fg"><div><div class="logo">AURUM<i>RESIDENCES</i></div><p style="margin-top:20px;max-width:300px">Imobiliária de alto padrão fictícia, criada para demonstração. Identidade personalizável.</p></div>
+<div><h4>Links</h4><a href="#imoveis">Imóveis</a><a href="#destaques">Destaques</a><a href="#sobre">Sobre</a><a href="#captacao">Venda seu imóvel</a><a href="#equipe">Equipe</a></div>
+<div><h4>Categorias</h4><a href="#imoveis" data-cat="Casa">Casas</a><a href="#imoveis" data-cat="Apartamento">Apartamentos</a><a href="#imoveis" data-cat="Mansão">Mansões</a><a href="#imoveis" data-cat="Terreno">Terrenos</a><a href="#imoveis" data-cat="Comercial">Comerciais</a></div>
+<div><h4>Contato</h4><a id="fwa" target="_blank" rel="noopener">WhatsApp</a><span>Av. Exemplo, 1000 — São Paulo/SP<br>(endereço demonstrativo)</span><br><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></div></div>
+<div class="fb"><span>© 2026 AURUM Residences — demonstração</span><span><a href="#privacidade" data-doc="Política de Privacidade" style="display:inline">Política de privacidade</a> · <a href="#termos" data-doc="Termos de Uso" style="display:inline">Termos de uso</a></span></div></div></footer>
+
+<a id="wa" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+<div id="det"></div><button id="x" aria-label="Fechar">✕</button>
+<dialog id="dl"><h3 id="dt" style="font-size:30px"></h3><p>Texto-modelo de demonstração. Substitua pelo documento jurídico real da imobiliária antes de publicar.</p><form method="dialog"><button class="btn">Fechar</button></form></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+// ===== CONFIGURAÇÃO (substituir) =====
+const CFG={wa:"5511999990000",formEndpoint:""}; // formEndpoint: URL que recebe POST JSON (painel/CRM/Formspree etc.)
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia("(prefers-reduced-motion:reduce)").matches,MOB=innerWidth<800||/Mobi|Android/i.test(navigator.userAgent);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ss=(a,b,x)=>{x=clamp((x-a)/(b-a));return x*x*(3-2*x)};
+const wa=m=>`https://wa.me/${CFG.wa}?text=${encodeURIComponent(m)}`;
+$("#hwa").href=$("#wa").href=$("#fwa").href=wa("Olá! Vim pelo site da AURUM e gostaria de atendimento.");
+// ===== DADOS DEMONSTRATIVOS =====
+const D=[
+["villa-aurora","Villa Aurora","Mansão","comprar","São Paulo","Jardim Europa",18500000,6,7,8,820,1450,"EXCLUSIVO"],
+["residencia-lumen","Residência Lumen","Casa","comprar","São Paulo","Alto de Pinheiros",9200000,4,5,4,480,720,"DESTAQUE"],
+["penthouse-horizonte","Penthouse Horizonte","Apartamento","comprar","São Paulo","Itaim Bibi",12800000,4,5,5,410,410,"LANÇAMENTO"],
+["casa-cedro","Casa Cedro","Casa","comprar","Franca","Cidade Nova",3400000,4,4,4,320,600,""],
+["terreno-vale-verde","Terreno Vale Verde","Terreno","comprar","Franca","Vale Verde",1900000,0,0,0,0,1200,"DESTAQUE"],
+["loft-atelier","Loft Atelier","Apartamento","alugar","São Paulo","Vila Nova Conceição",28000,2,3,3,190,190,""],
+["torre-meridiano","Torre Meridiano","Comercial","alugar","São Paulo","Faria Lima",45000,0,4,6,380,380,"DESTAQUE"],
+["mansao-serra-azul","Mansão Serra Azul","Mansão","comprar","Ribeirão Preto","Jardim Botânico",14900000,7,8,10,1100,3000,"EXCLUSIVO"],
+["casa-brisa","Casa Brisa","Casa","alugar","Franca","Centro",18000,4,4,3,360,550,""],
+["residencia-monolito","Residência Monolito","Casa","comprar","Ribeirão Preto","Bonfim Paulista",7800000,5,6,6,520,900,"LANÇAMENTO"]
+].map((a,i)=>({i,slug:a[0],nome:a[1],tipo:a[2],fin:a[3],cid:a[4],bai:a[5],preco:a[6],q:a[7],b:a[8],v:a[9],ac:a[10],at:a[11],tag:a[12],ref:"AU-"+(100+i)}));
+const money=p=>p.preco.toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0})+(p.fin=="alugar"?"/mês":"");
+const PROPERTY_IMAGES=[
+ "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
+ "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
+];
+function art(i,k){return PROPERTY_IMAGES[(i*3+k)%PROPERTY_IMAGES.length]}
+// favoritos
+let FAV=[];try{FAV=JSON.parse(localStorage.getItem("au-fav")||"[]")}catch(e){}
+const saveFav=()=>{try{localStorage.setItem("au-fav",JSON.stringify(FAV))}catch(e){}$("#fn").textContent=FAV.length};
+const toggleFav=s=>{FAV=FAV.includes(s)?FAV.filter(x=>x!=s):[...FAV,s];saveFav()};
+// cards
+document.addEventListener("error",e=>{if(e.target instanceof HTMLImageElement&&e.target.closest(".card,.gal,.th")){e.target.style.opacity="0";e.target.parentElement.style.background="linear-gradient(135deg,#171719,#3a3022)"}},true);
+const card=p=>`<article class="card">${p.tag?`<span class="tag">${p.tag}</span>`:""}<button class="fav ${FAV.includes(p.slug)?"on":""}" data-f="${p.slug}" aria-label="Favoritar">♥</button>
+<a href="#imovel-${p.slug}"><div class="im"><img loading="lazy" alt="${p.nome} — ilustração demonstrativa" src="${art(p.i,0)}"></div>
+<h3>${p.nome}</h3><div class="loc">${p.bai}, ${p.cid} · ${p.tipo} · ${p.fin=="alugar"?"Locação":"Venda"}</div><div class="pr">${money(p)}</div>
+<div class="sp"><span>${p.q||"–"} quartos</span><span>${p.b||"–"} banheiros</span><span>${p.v||"–"} vagas</span><span>${p.ac||"–"} m² constr.</span><span>${p.at} m² total</span></div><span class="more">Ver detalhes →</span></a></article>`;
+const F={q:"",fin:"",tipo:"",cid:"",bai:"",pm:0,qt:0,fav:false};
+function fill(sel,arr,keep){const e=$(sel),v=e.value;e.innerHTML=e.options[0].outerHTML+arr.map(x=>`<option>${x}</option>`).join("");e.value=keep?v:""}
+function prices(){const r=F.fin=="alugar"?[[0,"Preço máximo"],[20000,"Até R$ 20 mil"],[30000,"Até R$ 30 mil"],[50000,"Até R$ 50 mil"]]:[[0,"Preço máximo"],[3000000,"Até R$ 3 mi"],[8000000,"Até R$ 8 mi"],[15000000,"Até R$ 15 mi"],[20000000,"Até R$ 20 mi"]];$("#fp").innerHTML=r.map(x=>`<option value="${x[0]}">${x[1]}</option>`).join("");F.pm=0}
+function render(){const q=F.q.toLowerCase();const l=D.filter(p=>(!F.fin||p.fin==F.fin)&&(!F.tipo||p.tipo==F.tipo)&&(!F.cid||p.cid==F.cid)&&(!F.bai||p.bai==F.bai)&&(!F.pm||p.preco<=F.pm)&&(!F.qt||p.q>=F.qt)&&(!F.fav||FAV.includes(p.slug))&&(!q||(p.nome+p.bai+p.cid+p.tipo).toLowerCase().includes(q)));
+$("#grid").innerHTML=l.length?l.map(card).join(""):`<p style="grid-column:1/-1;color:var(--mu)">Nenhum imóvel encontrado. Ajuste os filtros.</p>`;$("#cn").textContent=l.length+" imóvel(is)"}
+fill("#ft",[...new Set(D.map(p=>p.tipo))]);fill("#fc",[...new Set(D.map(p=>p.cid))]);fill("#fb",[...new Set(D.map(p=>p.bai))]);prices();saveFav();render();
+const bind=(s,k,fn)=>$(s).addEventListener(k=="q"?"input":"change",e=>{F[k]=e.target.type=="checkbox"?e.target.checked:(["pm","qt"].includes(k)?+e.target.value:e.target.value);fn&&fn();render()});
+bind("#fq","q");bind("#ff","fin",prices);bind("#ft","tipo");bind("#fp","pm");bind("#fr","qt");bind("#fv","fav");
+bind("#fc","cid",()=>{fill("#fb",[...new Set(D.filter(p=>!F.cid||p.cid==F.cid).map(p=>p.bai))]);F.bai=""});bind("#fb","bai");
+document.addEventListener("click",e=>{const f=e.target.closest("[data-f]");if(f){e.preventDefault();toggleFav(f.dataset.f);f.classList.toggle("on");if(F.fav)render();return}
+const c=e.target.closest("[data-cat]");if(c){F.tipo=c.dataset.cat;$("#ft").value=F.tipo;render()}
+const d=e.target.closest("[data-doc]");if(d){e.preventDefault();$("#dt").textContent=d.dataset.doc;$("#dl").showModal()}});
+// destaques
+$("#car").innerHTML=D.filter(p=>p.tag||p.preco>9e6).map(card).join("");
+$("#cp").onclick=()=>$("#car").scrollBy({left:-440,behavior:"smooth"});$("#cx").onclick=()=>$("#car").scrollBy({left:440,behavior:"smooth"});
+// equipe
+$("#team").innerHTML=[["Helena Duarte","Alto padrão e mansões","5511999990001"],["Rafael Monteiro","Investimento e comerciais","5511999990002"],["Camila Arantes","Locação e terrenos","5511999990003"]].map(t=>`<div class="rv"><div class="av">${t[0][0]}<small>FOTO DEMONSTRATIVA</small></div><h3 style="font-size:28px">${t[0]}</h3><div class="loc">${t[1]}</div><a class="more" target="_blank" rel="noopener" href="https://wa.me/${t[2]}?text=${encodeURIComponent("Olá "+t[0].split(" ")[0]+", vim pelo site da AURUM.")}">WhatsApp →</a></div>`).join("");
+// formulários
+async function send(data,statusEl,kind){const msg=`Olá! (${kind}) `+Object.entries(data).map(([k,v])=>`${k}: ${v}`).join(" | ");
+if(CFG.formEndpoint){try{const r=await fetch(CFG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({kind,...data})});if(!r.ok)throw 0;statusEl.textContent="Recebemos sua solicitação. Em breve entraremos em contato.";return}catch(e){statusEl.textContent="Falha no envio. Abrindo WhatsApp como alternativa…"}}
+else statusEl.textContent="Abrindo o WhatsApp com os seus dados (configure CFG.formEndpoint para envio ao painel).";
+window.open(wa(msg),"_blank","noopener")}
+$("#cf").addEventListener("submit",e=>{e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f));if(!d.nome.trim()||d.telefone.replace(/\D/g,"").length<10){$("#cs").textContent="Informe nome e telefone válidos (com DDD).";return}send(d,$("#cs"),"Captação de imóvel")});
+// ===== detalhe + rotas =====
+const pt=$("#pt");let gi=0,cur=null;
+function gal(){$("#gm").src=art(cur.i,gi);$$(".th img").forEach((t,n)=>t.classList.toggle("on",n==gi))}
+function openDet(p){cur=p;gi=0;const sim=D.filter(x=>x!=p&&(x.tipo==p.tipo||x.cid==p.cid)).slice(0,3);
+const feats=p.tipo=="Terreno"?["Topografia favorável","Documentação em dia","Infraestrutura próxima","Potencial de incorporação"]:["Arquitetura contemporânea","Grandes vãos envidraçados","Automação residencial","Área gourmet","Piscina","Segurança 24h"];
+$("#det").innerHTML=`<div class="wrap dg"><div><div class="gal"><img id="gm" alt="${p.nome}"><button style="left:0" id="gp" aria-label="Anterior">‹</button><button style="right:0" id="gn" aria-label="Próxima">›</button></div>
+<div class="th">${[0,1,2,3].map(k=>`<img src="${art(p.i,k)}" alt="Foto ${k+1}" data-g="${k}">`).join("")}</div>
+<h3 style="font-size:34px;margin-top:40px">Descrição</h3><p>${p.nome} é ${p.tipo=="Terreno"?"um terreno":"um imóvel"} de alto padrão em ${p.bai}, ${p.cid}, com ${p.ac?p.ac+" m² construídos em ":""}${p.at} m² de área total. Texto demonstrativo a ser substituído pela descrição real.</p>
+<h3 style="font-size:28px">Características</h3><ul>${feats.map(f=>`<li>${f}</li>`).join("")}</ul></div>
+<div>${p.tag?`<span class="tag" style="position:static;display:inline-block">${p.tag}</span>`:""}<h1 style="font-size:clamp(36px,5vw,60px);margin:16px 0 4px">${p.nome}</h1><div class="loc">${p.bai}, ${p.cid} · Ref. ${p.ref}</div><div class="pr" style="font-size:34px">${money(p)}</div>
+<div class="sg"><div><b>${p.q||"–"}</b>quartos</div><div><b>${p.b||"–"}</b>banheiros</div><div><b>${p.v||"–"}</b>vagas</div><div><b>${p.ac||"–"} m²</b>construída</div><div><b>${p.at} m²</b>total</div><div><b>${p.tipo}</b>${p.fin}</div></div>
+<div class="row"><a class="btn f" target="_blank" rel="noopener" href="${wa(`Olá! Tenho interesse no imóvel ${p.nome} (Ref. ${p.ref}) em ${p.bai}, ${p.cid}. Link: ${location.href.split("#")[0]}#imovel-${p.slug}`)}">WhatsApp</a><button class="btn" id="sh">Compartilhar</button><button class="btn" id="fv2">${FAV.includes(p.slug)?"♥ Favorito":"♡ Favoritar"}</button></div>
+<div class="map"><span class="eyebrow">Localização</span><p style="margin:8px 0 14px">${p.bai}, ${p.cid} — localização aproximada (demonstrativa).</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.bai+", "+p.cid)}">Abrir no mapa</a></div>
+<h3 style="font-size:28px">Agendar visita</h3><form class="fm" id="vf" novalidate><input name="nome" placeholder="Seu nome" required><input name="data" type="date" required><select name="horario"><option>Manhã</option><option>Tarde</option><option>Noite</option></select><input name="telefone" type="tel" placeholder="Telefone" required><div class="full"><button class="btn f" type="submit">Solicitar visita</button></div><div class="full st" id="vs" role="status"></div></form></div></div>
+<div class="wrap pad"><h3 style="font-size:44px;margin-bottom:30px">Imóveis semelhantes</h3><div class="grid">${sim.map(card).join("")}</div></div>`;
+gal();$("#gp").onclick=()=>{gi=(gi+3)%4;gal()};$("#gn").onclick=()=>{gi=(gi+1)%4;gal()};$$(".th img").forEach(t=>t.onclick=()=>{gi=+t.dataset.g;gal()});
+$("#sh").onclick=async()=>{const u=location.href;try{if(navigator.share)await navigator.share({title:p.nome,url:u});else{await navigator.clipboard.writeText(u);$("#sh").textContent="Link copiado"}}catch(e){}};
+$("#fv2").onclick=e=>{toggleFav(p.slug);e.target.textContent=FAV.includes(p.slug)?"♥ Favorito":"♡ Favoritar"};
+$("#vf").addEventListener("submit",e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));if(!d.nome.trim()||!d.data||d.telefone.replace(/\D/g,"").length<10){$("#vs").textContent="Preencha nome, data e telefone válidos.";return}send({...d,imovel:p.nome,ref:p.ref},$("#vs"),"Agendamento de visita")});
+$("#det").classList.add("on");$("#det").scrollTop=0;document.documentElement.style.overflow="hidden";document.title=p.nome+" — AURUM Residences"}
+function route(){const h=location.hash.slice(1),p=h.startsWith("imovel-")&&D.find(x=>"imovel-"+x.slug==h);
+const run=()=>{if(p)openDet(p);else{$("#det").classList.remove("on");document.documentElement.style.overflow="";document.title="AURUM Residences — Imobiliária de alto padrão";const t=h&&document.getElementById(h);if(t)t.scrollIntoView()}pt.classList.remove("on")};
+if(p||$("#det").classList.contains("on")){pt.classList.add("on");setTimeout(run,420)}}
+addEventListener("hashchange",route);$("#x").onclick=()=>{location.hash="imoveis"};
+addEventListener("keydown",e=>{if($("#det").classList.contains("on")){if(e.key=="Escape")location.hash="imoveis";if(e.key=="ArrowRight")$("#gn").click();if(e.key=="ArrowLeft")$("#gp").click()}});
+if(location.hash.startsWith("#imovel-"))route();
+// header, mobile navigation, cursor
+addEventListener("scroll",()=>$("#hd").classList.toggle("sc",scrollY>60),{passive:true});
+const menuButton=$("#mb"),mainNav=$("#mainnav");
+function closeMenu(){mainNav.classList.remove("open");$("#hd").classList.remove("menuopen");menuButton.setAttribute("aria-expanded","false");menuButton.setAttribute("aria-label","Abrir menu")}
+menuButton.addEventListener("click",()=>{const opened=mainNav.classList.toggle("open");$("#hd").classList.toggle("menuopen",opened);menuButton.setAttribute("aria-expanded",String(opened));menuButton.setAttribute("aria-label",opened?"Fechar menu":"Abrir menu")});
+mainNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+addEventListener("resize",()=>{if(innerWidth>900)closeMenu()},{passive:true});
+if(matchMedia("(pointer:fine)").matches&&!RM){const c=document.createElement("div");c.className="cur";document.body.append(c);let x=0,y=0,tx=0,ty=0;addEventListener("mousemove",e=>{tx=e.clientX;ty=e.clientY});
+(function l(){x+=(tx-x)*.18;y+=(ty-y)*.18;c.style.left=x+"px";c.style.top=y+"px";requestAnimationFrame(l)})();
+document.addEventListener("mouseover",e=>c.classList.toggle("h",!!e.target.closest("a,button,.fav")))}
+// animações GSAP
+if(window.gsap&&window.ScrollTrigger&&!RM){gsap.registerPlugin(ScrollTrigger);
+$$(".sw").forEach(e=>{e.innerHTML=e.textContent.trim().split(/\s+/).map(w=>`<span class="wd"><span>${w}</span></span>`).join(" ");const s=e.querySelectorAll(".wd span");gsap.set(s,{yPercent:115});ScrollTrigger.create({trigger:e,start:"top 88%",once:true,onEnter:()=>gsap.to(s,{yPercent:0,duration:1.1,stagger:.07,ease:"power4.out"})})});
+gsap.set(".rv",{y:40,opacity:0});ScrollTrigger.batch(".rv",{start:"top 90%",once:true,onEnter:b=>gsap.to(b,{y:0,opacity:1,duration:1,stagger:.12,ease:"power3.out"})});
+$$("[data-n]").forEach(e=>{const o={v:0};ScrollTrigger.create({trigger:e,start:"top 90%",once:true,onEnter:()=>gsap.to(o,{v:+e.dataset.n,duration:2.2,ease:"power2.out",onUpdate:()=>e.textContent=Math.round(o.v).toLocaleString("pt-BR")})})})}
+else $$("[data-n]").forEach(e=>e.textContent=(+e.dataset.n).toLocaleString("pt-BR"));
+// ===== CENA 3D =====
+const story=$("#story"),ST=["Fundações","Estrutura","Paredes","Pavimentos","Vidros","Fachada","Iluminação","Piscina","Paisagismo","Residência concluída"];
+let target=RM?.2:0,cur3=target,ok=false;
+function init3D(){let R;try{if(!window.THREE)return false;R=new THREE.WebGLRenderer({canvas:$("#cv"),antialias:!MOB,powerPreference:"high-performance"})}catch(e){return false}
+R.setPixelRatio(Math.min(devicePixelRatio,MOB?1.5:2));R.toneMapping=THREE.ACESFilmicToneMapping;R.shadowMap.enabled=!MOB;
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(38,1,.1,120);sc.background=new THREE.Color(0x050505);sc.fog=new THREE.FogExp2(0x050505,.017);
+const pm=new THREE.PMREMGenerator(R),es=new THREE.Scene();es.background=new THREE.Color(0x0a0a0c);
+[[0,8,0,12,.3,12,3],[-12,3,2,.3,6,10,1.4],[10,2,-6,.3,5,8,1]].forEach(a=>{const m=new THREE.Mesh(new THREE.BoxGeometry(a[3],a[4],a[5]),new THREE.MeshBasicMaterial({color:new THREE.Color(1,.9,.75).multiplyScalar(a[6])}));m.position.set(a[0],a[1],a[2]);es.add(m)});sc.environment=pm.fromScene(es).texture;
+const amb=new THREE.HemisphereLight(0x6a7a99,0x111111,0),key=new THREE.DirectionalLight(0xffe2b8,0),rim=new THREE.DirectionalLight(0x6f8fff,0);key.position.set(8,13,10);rim.position.set(-9,5,-8);
+if(!MOB){key.castShadow=true;key.shadow.mapSize.set(1024,1024);Object.assign(key.shadow.camera,{left:-12,right:12,top:12,bottom:-12});}
+const p1=new THREE.PointLight(0xffc27a,0,10),p2=new THREE.PointLight(0xffc27a,0,9);p1.position.set(0,1.6,0);p2.position.set(1.5,3.6,0);
+const house=new THREE.Group();sc.add(amb,key,rim,house);house.add(p1,p2);
+const M=(c,r,m,x={})=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:r,metalness:m},x));
+const con=M(0x34343a,.8,.05),drk=M(0x121214,.5,.3),wood=M(0x8a5a35,.6,0),glass=M(0x9ec5d6,.04,.9,{transparent:true,opacity:.3}),warm=M(0xffc878,.5,0,{emissive:0xffb050,emissive:new THREE.Color(0xffb050),emissiveIntensity:2}),pool=M(0x1fa3c8,.1,.2,{emissive:new THREE.Color(0x0e7fa0),emissiveIntensity:1.1,transparent:true,opacity:.9}),leaf=M(0x1f4a32,.9,0),trunk=M(0x3b2a1c,.9,0),stone=M(0x57534d,.9,0);
+const gnd=new THREE.Mesh(new THREE.CircleGeometry(42,64),M(0x0b0b0c,.35,.5));gnd.rotation.x=-Math.PI/2;gnd.receiveShadow=!MOB;sc.add(gnd);
+const parts=[],B=(w,h,d)=>new THREE.BoxGeometry(w,h,d);
+const add=(g,m,x,y,z,st)=>{const o=new THREE.Mesh(g,m);o.position.set(x,y,z);o.userData={st,bx:x,by:y,bz:z,rn:Math.random()};o.castShadow=o.receiveShadow=!MOB;house.add(o);parts.push(o)};
+add(B(9,.3,6),con,0,.15,0,1);
+[-4,0,4].forEach(x=>[-2.5,2.5].forEach(z=>add(B(.2,2.2,.2),drk,x,1.4,z,2)));
+add(B(8.4,2.3,.2),con,0,1.45,-2.9,3);add(B(.2,2.3,5.8),con,4.2,1.45,0,3);add(B(2,2.3,2.4),drk,-2.8,1.45,-1.4,3);
+add(B(9.4,.22,6.4),con,0,2.7,0,4);add(B(6,1.6,4.6),con,1.5,3.6,-.4,4);add(B(7,.18,5.4),drk,1.5,4.5,-.4,4);
+add(B(7.8,2.1,.06),glass,0,1.4,2.85,5);add(B(.06,2.1,5.6),glass,-4.1,1.4,0,5);add(B(5.8,1.4,.06),glass,1.5,3.6,1.95,5);
+for(let i=0;i<9;i++)add(B(.12,1.5,.1),wood,-1.3+i*.65,3.6,2.05,6);add(B(.3,2.3,5.8),stone,4.4,1.45,0,6);
+add(B(8,.05,.05),warm,0,2.55,2.7,7);add(B(5.6,.05,.05),warm,1.5,4.35,2,7);add(B(7.6,.02,5.4),warm,0,.33,0,7);
+add(B(8,.08,3.4),stone,-.5,.04,5.3,8);add(B(6.8,.1,2.4),pool,-.5,.1,5.3,8);
+[[-8,-3],[-7,3],[-7,8],[7.5,-4],[8,4],[7,9],[-2,-7],[3,-7.5]].forEach(a=>{add(new THREE.CylinderGeometry(.1,.14,1.3,8),trunk,a[0],.65,a[1],9);add(new THREE.IcosahedronGeometry(.95+Math.random()*.3,1),leaf,a[0],1.9,a[1],9)});
+add(B(5,.6,.6),leaf,-3,.3,8.2,9);
+// partículas (fumaça)
+const N=MOB?900:3200,pos=new Float32Array(N*3),home=new Float32Array(N*3),dr=new Float32Array(N*4),col=new Float32Array(N*3);
+for(let i=0;i<N;i++){const o=parts[(Math.random()*parts.length)|0],g=o.geometry.parameters||{},u=o.userData;
+home[i*3]=u.bx+(Math.random()-.5)*(g.width||.8);home[i*3+1]=u.by+(Math.random()-.5)*(g.height||.8);home[i*3+2]=u.bz+(Math.random()-.5)*(g.depth||.8);
+const a=Math.random()*6.283,b=Math.random()*2-1,s=Math.sqrt(1-b*b);dr[i*4]=Math.cos(a)*s;dr[i*4+1]=b*.6+.4;dr[i*4+2]=Math.sin(a)*s;dr[i*4+3]=Math.random();
+const g2=.35+Math.random()*.4,gold=Math.random()<.12;col[i*3]=gold?.78:g2;col[i*3+1]=gold?.65:g2;col[i*3+2]=gold?.42:g2+.04}
+const geo=new THREE.BufferGeometry();geo.setAttribute("position",new THREE.BufferAttribute(pos,3));geo.setAttribute("color",new THREE.BufferAttribute(col,3));
+const cvs=document.createElement("canvas");cvs.width=cvs.height=64;const cx=cvs.getContext("2d"),gr=cx.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,"rgba(255,255,255,.9)");gr.addColorStop(1,"rgba(255,255,255,0)");cx.fillStyle=gr;cx.fillRect(0,0,64,64);
+const pmat=new THREE.PointsMaterial({size:.4,map:new THREE.CanvasTexture(cvs),vertexColors:true,transparent:true,depthWrite:false,opacity:0});const pts=new THREE.Points(geo,pmat);pts.frustumCulled=false;pts.visible=false;house.add(pts);
+const K=[[0,.55,17,4.5,1.8],[.1,.7,16,4,1.8],[.35,2.5,9.5,2.6,1.6],[.5,3.2,13,3.5,1.8],[.52,3.2,15,5,1.2],[.9,6.0,15,3.8,1.4],[1,6.47,8.6,1.9,1.9]];
+function kf(p){let i=0;while(i<K.length-2&&p>K[i+1][0])i++;const a=K[i],b=K[i+1],t=ss(a[0],b[0],p);return[1,2,3,4].map(j=>a[j]+(b[j]-a[j])*t)}
+const t0=performance.now(),fa=new THREE.Color(0x050505),fb=new THREE.Color(0x2a2a2e);let last=t0,slow=0,fr=0;
+function size(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}size();addEventListener("resize",()=>{size();frame(true)});
+function frame(once){const now=performance.now(),t=(now-t0)/1000,p=cur3;
+const L=RM?1:ss(0,1,(now-t0)/4200);amb.intensity=.55*L;key.intensity=1.7*L;rim.intensity=(.4+.6*ss(.05,.2,p))*1.0*L;
+// estado da casa
+const d=clamp((p-.37)/.15),d2=clamp((p-.37)/.22),b=clamp((p-.52)/.38)*10;
+parts.forEach(o=>{const u=o.userData;let f;if(p<.37)f=1;else if(p<.52)f=1-ss(0,1,d*1.7-u.rn*.7);else f=ss(u.st-1+u.rn*.25,u.st+.25,b);
+o.visible=f>.003;const e=1-f;o.scale.setScalar(Math.max(f,.001));o.position.set(u.bx+(u.rn-.5)*e*7,u.by+e*(2+u.rn*3),u.bz+(.5-u.rn)*e*5);o.rotation.y=e*(u.rn-.5)*2});
+const lt=p<.52?(p<.37?1:1-d):ss(5.5,7,b);p1.intensity=2.2*lt;p2.intensity=2*lt;warm.emissiveIntensity=2+ss(.9,1,p)*1.5;
+// fumaça
+const po=ss(.37,.43,p)*(1-ss(.5,.62,p))*.85;pts.visible=po>.01&&!RM;pmat.opacity=po;pmat.size=.28+d2*1.1;
+if(pts.visible){const dd=slow>20?.5:1;for(let i=0;i<N;i++){const e=clamp(d2*1.7-dr[i*4+3]*.7),k=e*(3+dr[i*4+3]*9);
+pos[i*3]=home[i*3]+dr[i*4]*k+Math.sin(t*.8+i)*e*.6;pos[i*3+1]=home[i*3+1]+dr[i*4+1]*k+e*e*4;pos[i*3+2]=home[i*3+2]+dr[i*4+2]*k+Math.cos(t*.7+i)*e*.6}geo.attributes.position.needsUpdate=true}
+sc.fog.color.lerpColors(fa,fb,Math.max(0,po)*.9);sc.background.copy(sc.fog.color);
+house.position.y=-ss(.1,.35,p)*.9+(RM?0:Math.sin(t*.9)*.06);
+const c=kf(p),asp=innerWidth/innerHeight,r=c[1]*(asp<1?1+(1-asp)*.95:1),dx=RM?0:Math.sin(t*.3)*.12;
+cam.position.set(Math.sin(c[0])*r+dx,c[2]+(RM?0:Math.sin(t*.4)*.08),Math.cos(c[0])*r);cam.lookAt(0,c[3],0);
+R.toneMappingExposure=.9+ss(.88,1,p)*.35;R.render(sc,cam);
+// UI
+$("#smoke").style.opacity=ss(.38,.5,p)*(1-ss(.54,.64,p))*.9;$("#t1").style.opacity=1-ss(.03,.12,p);$("#sc").style.opacity=1-ss(0,.05,p);
+$("#t5").style.opacity=ss(.93,.99,p);$("#t5").style.pointerEvents=p>.95?"auto":"none";$("#pb").style.height=p*100+"%";
+let cp="";if(p>.12&&p<.34)cp="Arquitetura em movimento";else if(p>.37&&p<.5)cp="Tudo começa a se desfazer";else if(p>=.53&&p<.9)cp="0"+Math.min(10,Math.floor(b)+1)+" / 10 · "+ST[Math.min(9,Math.floor(b))];$("#cap").textContent=cp.replace(/^010/,"10");
+if(!once){fr++;const dt=now-last;last=now;slow=dt>34?slow+1:Math.max(0,slow-1);if(slow>45&&R.getPixelRatio()>1){R.setPixelRatio(1);slow=0;geo.setDrawRange(0,N>>1)}}}
+const io=new IntersectionObserver(e=>{vis=e[0].isIntersecting});let vis=true;io.observe(story);
+function loop(){requestAnimationFrame(loop);if(!vis||document.hidden)return;cur3+=(target-cur3)*.085;frame()}
+frame(true);if(!RM)loop();return true}
+function setup(){ok=init3D();document.body.classList.add("ready");
+if(!ok)story.classList.add("no3d");else if(RM)story.classList.add("rm");
+if(ok&&!RM){if(window.ScrollTrigger)ScrollTrigger.create({trigger:story,start:"top top",end:"bottom bottom",onUpdate:s=>target=s.progress});
+else addEventListener("scroll",()=>{target=clamp(scrollY/(story.offsetHeight-innerHeight))},{passive:true})}}
+try{setup()}catch(e){console.error(e);story.classList.add("no3d");document.body.classList.add("ready")}
+setTimeout(()=>document.body.classList.add("ready"),4000);
+</script>
+</body>
+</html>
