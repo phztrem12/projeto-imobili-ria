@@ -206,16 +206,29 @@ const D=[
 ].map((a,i)=>({i,slug:a[0],nome:a[1],tipo:a[2],fin:a[3],cid:a[4],bai:a[5],preco:a[6],q:a[7],b:a[8],v:a[9],ac:a[10],at:a[11],tag:a[12],ref:"AU-"+(100+i)}));
 const money=p=>p.preco.toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0})+(p.fin=="alugar"?"/mês":"");
 const PROPERTY_IMAGES=[
- "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85",
- "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85",
- "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
- "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
- "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1400&q=85",
- "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85",
- "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
- "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
+ // Fotografias reais de arquitetura residencial — capa individual de cada imóvel
+ "https://images.unsplash.com/photo-1760067537293-6b30141d6a52?auto=format&fit=crop&w=1600&q=85", // Villa Aurora — madeira e pedra
+ "https://images.unsplash.com/photo-1756435292384-1bf32eff7baf?auto=format&fit=crop&w=1600&q=85", // Residência Lumen — casa ao pôr do sol
+ "https://images.unsplash.com/photo-1791720022521-5aa64439cebf?auto=format&fit=crop&w=1600&q=85", // Penthouse — edifício residencial
+ "https://images.unsplash.com/photo-1744858207706-dd827060504d?auto=format&fit=crop&w=1600&q=85", // Casa Cedro — fachada contemporânea
+ "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=85", // Terreno — paisagem e área aberta
+ "https://images.unsplash.com/photo-1753911372224-2b56c07cc737?auto=format&fit=crop&w=1600&q=85", // Loft — cozinha e living
+ "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85", // Torre — arquitetura residencial
+ "https://images.unsplash.com/photo-1751239837215-c21ca4571663?auto=format&fit=crop&w=1600&q=85", // Mansão Serra Azul — casa iluminada
+ "https://images.unsplash.com/photo-1766848834880-59e1632d92a8?auto=format&fit=crop&w=1600&q=85", // Casa Brisa — casa e área externa
+ "https://images.unsplash.com/photo-1766603636700-e9d80473f40f?auto=format&fit=crop&w=1600&q=85" // Residência Monolito — casa com grandes janelas
 ];
-function art(i,k){return PROPERTY_IMAGES[(i*3+k)%PROPERTY_IMAGES.length]}
+const PROPERTY_GALLERY_IMAGES=[
+ "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
+ "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
+ "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=85",
+ "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1600&q=85",
+ "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=85",
+ "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85",
+ "https://images.unsplash.com/photo-1760067537293-6b30141d6a52?auto=format&fit=crop&w=1600&q=85",
+ "https://images.unsplash.com/photo-1753911372224-2b56c07cc737?auto=format&fit=crop&w=1600&q=85"
+];
+function art(i,k){return k===0?PROPERTY_IMAGES[i%PROPERTY_IMAGES.length]:PROPERTY_GALLERY_IMAGES[(i*2+k-1)%PROPERTY_GALLERY_IMAGES.length]}
 // favoritos
 let FAV=[];try{FAV=JSON.parse(localStorage.getItem("au-fav")||"[]")}catch(e){}
 const saveFav=()=>{try{localStorage.setItem("au-fav",JSON.stringify(FAV))}catch(e){}$("#fn").textContent=FAV.length};
@@ -223,7 +236,7 @@ const toggleFav=s=>{FAV=FAV.includes(s)?FAV.filter(x=>x!=s):[...FAV,s];saveFav()
 // cards
 document.addEventListener("error",e=>{if(e.target instanceof HTMLImageElement&&e.target.closest(".card,.gal,.th")){e.target.style.opacity="0";e.target.parentElement.style.background="linear-gradient(135deg,#171719,#3a3022)"}},true);
 const card=p=>`<article class="card">${p.tag?`<span class="tag">${p.tag}</span>`:""}<button class="fav ${FAV.includes(p.slug)?"on":""}" data-f="${p.slug}" aria-label="Favoritar">♥</button>
-<a href="#imovel-${p.slug}"><div class="im"><img loading="lazy" alt="${p.nome} — ilustração demonstrativa" src="${art(p.i,0)}"></div>
+<a href="#imovel-${p.slug}"><div class="im"><img loading="lazy" alt="${p.nome} — fotografia demonstrativa do imóvel" src="${art(p.i,0)}"></div>
 <h3>${p.nome}</h3><div class="loc">${p.bai}, ${p.cid} · ${p.tipo} · ${p.fin=="alugar"?"Locação":"Venda"}</div><div class="pr">${money(p)}</div>
 <div class="sp"><span>${p.q||"–"} quartos</span><span>${p.b||"–"} banheiros</span><span>${p.v||"–"} vagas</span><span>${p.ac||"–"} m² constr.</span><span>${p.at} m² total</span></div><span class="more">Ver detalhes →</span></a></article>`;
 const F={q:"",fin:"",tipo:"",cid:"",bai:"",pm:0,qt:0,fav:false};
@@ -255,7 +268,7 @@ function gal(){$("#gm").src=art(cur.i,gi);$$(".th img").forEach((t,n)=>t.classLi
 function openDet(p){cur=p;gi=0;const sim=D.filter(x=>x!=p&&(x.tipo==p.tipo||x.cid==p.cid)).slice(0,3);
 const feats=p.tipo=="Terreno"?["Topografia favorável","Documentação em dia","Infraestrutura próxima","Potencial de incorporação"]:["Arquitetura contemporânea","Grandes vãos envidraçados","Automação residencial","Área gourmet","Piscina","Segurança 24h"];
 $("#det").innerHTML=`<div class="wrap dg"><div><div class="gal"><img id="gm" alt="${p.nome}"><button style="left:0" id="gp" aria-label="Anterior">‹</button><button style="right:0" id="gn" aria-label="Próxima">›</button></div>
-<div class="th">${[0,1,2,3].map(k=>`<img src="${art(p.i,k)}" alt="Foto ${k+1}" data-g="${k}">`).join("")}</div>
+<div class="th">${[0,1,2,3].map(k=>`<img src="${art(p.i,k)}" alt="Fotografia ${k+1} de ${p.nome}" data-g="${k}">`).join("")}</div>
 <h3 style="font-size:34px;margin-top:40px">Descrição</h3><p>${p.nome} é ${p.tipo=="Terreno"?"um terreno":"um imóvel"} de alto padrão em ${p.bai}, ${p.cid}, com ${p.ac?p.ac+" m² construídos em ":""}${p.at} m² de área total. Texto demonstrativo a ser substituído pela descrição real.</p>
 <h3 style="font-size:28px">Características</h3><ul>${feats.map(f=>`<li>${f}</li>`).join("")}</ul></div>
 <div>${p.tag?`<span class="tag" style="position:static;display:inline-block">${p.tag}</span>`:""}<h1 style="font-size:clamp(36px,5vw,60px);margin:16px 0 4px">${p.nome}</h1><div class="loc">${p.bai}, ${p.cid} · Ref. ${p.ref}</div><div class="pr" style="font-size:34px">${money(p)}</div>
